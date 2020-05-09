@@ -23,8 +23,8 @@ func TestSum(t *testing.T) {
 			// resultF := twoSum(test.arrayIn, test.tarjetIn)
 			ResultStep := numberOfSteps(test.num)
 
-			if ResultStep == test.num {
-				t.Error("Retorna", ResultStep, ",y el valor correcto es", test.num)
+			if ResultStep != test.result {
+				t.Error("Retorna", ResultStep, ",y el valor correcto es", test.result)
 			}
 		})
 	}
