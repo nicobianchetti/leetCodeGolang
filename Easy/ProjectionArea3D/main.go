@@ -73,3 +73,19 @@ func getAxisXZ(arrayXZ []int, length int) int {
 intSlice := []int{3,5,6,4,2,293,-34}
 sort.Sort(sort.Reverse(sort.IntSlice(intSlice)))
 */
+
+//Solución alternativa resuelta por https://leetcode.com/colix/
+// func projectionArea(grid [][]int) int {
+// 	var ret int
+// 	for i := range grid {
+// 		var row, col int
+// 		for j := range grid[i] {
+// 			if grid[i][j] != 0 {
+// 				ret++
+// 			}
+// 			row, col = int(math.Max(float64(row), float64(grid[i][j]))), int(math.Max(float64(col), float64(grid[j][i])))
+// 		}
+// 		ret += row + col
+// 	}
+// 	return ret
+// }
