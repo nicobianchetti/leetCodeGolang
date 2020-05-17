@@ -25,6 +25,12 @@ func TestDeleteColum(t *testing.T) {
 			A:      []string{"zyx", "wvu", "tsr"},
 			result: 3,
 		},
+
+		{
+			nombre: "Case 4:`[rrjk,furt,guzm]`",
+			A:      []string{"rrjk", "furt", "guzm"},
+			result: 2,
+		},
 	}
 
 	for _, test := range casos {
