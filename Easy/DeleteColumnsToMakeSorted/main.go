@@ -2,6 +2,12 @@ package main
 
 //https://leetcode.com/problems/delete-columns-to-make-sorted/
 
+/*
+Descripción: armo una cadena de caracteres por cada indice del array. Si la cadena formada es decreciente,
+entonces sumo 1 al contador y elimino ese indice hasta que me queden todas cadenas con caracteres ordenados de
+menor a mayor
+*/
+
 func minDeletionSize(A []string) int {
 	var countAux int
 	for j := 0; j < len(A[0]); j++ {
@@ -16,7 +22,8 @@ func minDeletionSize(A []string) int {
 }
 
 /*
-Solución 1
+Solución 1:
+Armo un mapa helper donde guardo ordenadas las cadenas de caracteres de cada indice
 */
 
 // func minDeletionSize(A []string) int {
