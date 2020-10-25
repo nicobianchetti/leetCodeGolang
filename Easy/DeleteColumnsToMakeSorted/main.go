@@ -30,7 +30,7 @@ Armo un mapa helper donde guardo ordenadas las cadenas de caracteres de cada ind
 // 	var mapHelper = make(map[int]string)
 // 	for _, value := range A {
 // 		for index, valueChar := range value {
-// 			mapHelper[index] += string(valueChar)
+// mapHelper[index] += string(valueChar)
 // 		}
 // 	}
 

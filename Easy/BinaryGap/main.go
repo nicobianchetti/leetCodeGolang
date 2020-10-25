@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -56,12 +55,38 @@ There aren't any consecutive pairs of 1's in the binary representation of 8, so 
 */
 
 func binaryGap(N int) int {
+	//Convierto el int de entrada en un binario,ésto me devuelve una cadena de bytes que puedo recorrrer
 	Binary := strconv.FormatInt(int64(N), 2)
-	fmt.Println(Binary)
 
-	for _, v := range Binary {
-		fmt.Println("Valor", string(v))
+	Helper := make([]int, len(Binary))
+
+	var countMax int
+	var countAux int
+	//recorro la cadena de byes. Para traspasarlos a un array de int, primero convierto el byte(Ej: 49) a string("1")
+	//Luego el string lo covierto a int(1) usando strconv.Atoi
+	for i, v := range Binary {
+		Helper[i], _ = strconv.Atoi(string(v))
 	}
 
-	return 0
+	isPrimerUno := true
+
+	for _, v := range Helper {
+		if v == 1 {
+			if isPrimerUno {
+				isPrimerUno = false
+			} else {
+				countAux++
+				if countAux > countMax {
+					countMax = countAux
+				}
+				countAux = 0
+			}
+		} else {
+			if !isPrimerUno {
+				countAux++
+			}
+		}
+	}
+
+	return countMax
 }

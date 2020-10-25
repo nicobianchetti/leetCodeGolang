@@ -26,9 +26,9 @@ func transpose(A [][]int) [][]int {
 	//Solution 2
 	Trasp := make([][]int, lenJ)
 
-	for i, _ := range Trasp {
+	for i := range Trasp {
 		Trasp[i] = make([]int, lenI)
-		for j, _ := range Trasp[i] {
+		for j := range Trasp[i] {
 			Trasp[i][j] = A[j][i]
 		}
 	}

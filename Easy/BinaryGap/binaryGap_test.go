@@ -14,23 +14,23 @@ func TestBinaryGap(t *testing.T) {
 			result: 2,
 		},
 
-		// {
-		// 	name:   "Case 2",
-		// 	In:     5,
-		// 	result: 2,
-		// },
+		{
+			name:   "Case 2",
+			In:     5,
+			result: 2,
+		},
 
-		// {
-		// 	name:   "Case 3",
-		// 	In:     6,
-		// 	result: 1,
-		// },
+		{
+			name:   "Case 3",
+			In:     6,
+			result: 1,
+		},
 
-		// {
-		// 	name:   "Case 4",
-		// 	In:     8,
-		// 	result: 0,
-		// },
+		{
+			name:   "Case 4",
+			In:     8,
+			result: 0,
+		},
 	}
 
 	for _, test := range casos {
